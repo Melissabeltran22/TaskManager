@@ -1,11 +1,30 @@
 const registerView = `
-  <form id="registerForm">
-    <input type="text" id="name" placeholder="Nombre" required>
-    <input type="email" id="email" placeholder="Correo Electrónico" required>
-    <input type="password" id="password" placeholder="Contraseña" required>
-    <input type="text" id="department" placeholder="Departamento" required>
-    <button type="submit">Registrar</button>
-  </form>
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h2 class="card-title text-center text-primary">Registro de Usuario</h2>
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="name" class="text-primary">Nombre:</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email" class="text-primary">Correo Electrónico:</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password" class="text-primary">Contraseña:</label>
+          <input type="password" class="form-control" id="password" required>
+        </div>
+        <div class="form-group">
+          <label for="department" class="text-primary">Departamento:</label>
+          <input type="text" class="form-control" id="department" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+      </form>
+    </div>
+  </div>
 `;
 
-document.getElementById('app').innerHTML = registerView;
+function loadRegisterView() {
+  document.getElementById('app').innerHTML = registerView;
+}
