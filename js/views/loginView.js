@@ -1,4 +1,4 @@
-const loginView = `
+const loginView = 
   <div class="card shadow-sm">
     <div class="card-body">
       <h2 class="card-title text-center text-primary">Inicio de Sesión</h2>
@@ -15,8 +15,10 @@ const loginView = `
       </form>
     </div>
   </div>
-`;
+;
 
 function loadLoginView() {
   document.getElementById('app').innerHTML = loginView;
 }
+
+export { loadLoginView };

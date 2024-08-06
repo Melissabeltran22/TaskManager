@@ -1,4 +1,4 @@
-const taskFormView = `
+const taskFormView = 
   <div class="card shadow-sm">
     <div class="card-body">
       <h2 class="card-title text-center text-primary">Agregar Nueva Tarea</h2>
@@ -27,7 +27,7 @@ const taskFormView = `
       </form>
     </div>
   </div>
-`;
+;
 
 function loadTaskFormView() {
   document.getElementById('app').innerHTML = taskFormView;
