@@ -4,7 +4,7 @@ body {
   }
   
   h2 {
-    color: #0250a3;
+    color: #007bff;
   }
   
   .card {
@@ -49,3 +49,6 @@ body {
     background-color: #e2e6ea;
   }
   
+  .container {
+    max-width: 600px;
+  }
