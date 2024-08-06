@@ -28,3 +28,5 @@ const registerView = `
 function loadRegisterView() {
   document.getElementById('app').innerHTML = registerView;
 }
+
+export { loadRegisterView };
