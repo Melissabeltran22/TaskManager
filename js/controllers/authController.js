@@ -48,5 +48,15 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (event.target && event.target.id === 'loginLink') {
       loadLoginView();
     }
+
+
+
   });
 });
+
+document.addEventListener('click', function(event) {
+    if (event.target && event.target.id === 'logoutButton') {
+      alert('Cerrando sesión');
+      loadLoginView();
+    }
+  });
