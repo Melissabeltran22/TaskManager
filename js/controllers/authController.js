@@ -25,6 +25,28 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         alert('Por favor, complete todos los campos correctamente.');
       }
+    } else if (event.target && event.target.id === 'loginForm') {
+      event.preventDefault();
+
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+
+      const storedUser = JSON.parse(localStorage.getItem(email));
+
+      if (storedUser && storedUser.password === password) {
+        alert('Inicio de sesión exitoso');
+        loadDashboardView(storedUser);
+      } else {
+        alert('Credenciales incorrectas. Por favor, intente nuevamente.');
+      }
+    }
+  });
+
+  document.addEventListener('click', function(event) {
+    if (event.target && event.target.id === 'registerLink') {
+      loadRegisterView();
+    } else if (event.target && event.target.id === 'loginLink') {
+      loadLoginView();
     }
   });
 });
